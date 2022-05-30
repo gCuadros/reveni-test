@@ -19,12 +19,25 @@ const ruleForMedia = {
   use: ['file-loader']
 };
 
+const ruleforFonts = {
+  test: /\.(woff(2)?|ttf|eot|svg)(\?v=\d+\.\d+\.\d+)?$/,
+  use: [
+    {
+      loader: 'file-loader',
+      options: {
+        name: '[name].[ext]',
+        outputPath: 'fonts/'
+      }
+    }
+  ]
+};
+
 const ruleForCss = {
   test: /\.(css|scss)$/,
   use: ['style-loader', 'css-loader']
 };
 
-const rules = [rulesForJavaScript, ruleForTypeScript, ruleForCss];
+const rules = [rulesForJavaScript, ruleForTypeScript, ruleForCss, ruleforFonts];
 
 module.exports = (env, argv) => {
   const { mode } = argv;

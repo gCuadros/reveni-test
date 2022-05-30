@@ -1,3 +1,17 @@
 body {
   background: linear-gradient(90deg, #b9f7e3, #d8f5ec);
 }
+
+* {
+  font-family: 'Gilroy', 'Arial', sans-serif !important;
+}
+
+.text-primary {
+  color: #004060;
+}
+
+.btn-primary {
+  color: #fff !important;
+  background-color: #004060 !important;
+  border-color: #004060 !important;
+}

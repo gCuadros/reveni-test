@@ -1,4 +1,7 @@
 import './styles.scss';
+import '@pixelpay/fonts/dist/gilroy.css';
+import '@pixelpay/fonts/dist/icons.css';
+import '@pixelpay/fonts/dist/logos.css';
 
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from 'react-query';
