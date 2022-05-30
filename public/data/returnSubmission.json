@@ -1,0 +1,28 @@
+{
+  "id": "5b002ffa-7799-48b9-bd7a-ee14345e5dee",
+  "order_number": "727",
+  "status": "in_progress",
+  "currency": "EUR",
+  "date_created": "2022-05-16T16:28:02",
+  "total": "19.00",
+  "customer_id": "e46a68cc-7967-4caa-bf83-2e366b5d4b94",
+  "refund_method": "instant",
+  "refund_method_title": "Reveni Instant Refund",
+  "refund_method_iban": "ES2404874225313213617565",
+  "returned_line_items": [
+    {
+      "id": 315,
+      "name": "Single Shirt #1, Size: M",
+      "product_id": 93,
+      "quantity": 1,
+      "total": "7.00"
+    },
+    {
+      "id": 316,
+      "name": "Awesome Pants #2, Size: 42",
+      "product_id": 22,
+      "quantity": 1,
+      "total": "12.00"
+    }
+  ]
+}

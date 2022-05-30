@@ -1,0 +1,52 @@
+{
+  "id": 727,
+  "number": "727",
+  "status": "incomplete",
+  "currency": "EUR",
+  "date_created": "2022-03-22T16:28:02",
+  "total": "26.00",
+  "prices_include_tax": false,
+  "customer_email": "john.doe@example.com",
+  "billing": {
+    "first_name": "John",
+    "last_name": "Doe",
+    "company": "",
+    "address_1": "969 Market",
+    "address_2": "",
+    "city": "San Francisco",
+    "state": "CA",
+    "postcode": "94103",
+    "country": "US",
+    "email": "john.doe@example.com",
+    "phone": "(555) 555-5555"
+  },
+  "shipping": {
+    "first_name": "John",
+    "last_name": "Doe",
+    "company": "",
+    "address_1": "969 Market",
+    "address_2": "",
+    "city": "San Francisco",
+    "state": "CA",
+    "postcode": "94103",
+    "country": "US"
+  },
+  "payment_method": "bogus",
+  "payment_method_title": "Bogus Payment Gateway",
+  "line_items": [
+    {
+      "id": 315,
+      "name": "Single Shirt #1, Size: M",
+      "product_id": 93,
+      "quantity": 2,
+      "total": "7.00"
+    },
+    {
+      "id": 316,
+      "name": "Awesome Pants #2, Size: 42",
+      "product_id": 22,
+      "quantity": 1,
+      "total": "12.00"
+    }
+  ]
+}
