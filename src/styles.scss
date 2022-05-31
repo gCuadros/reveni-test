@@ -1,0 +1,27 @@
+body {
+  background: url('../public/resoruces/background.png');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+* {
+  font-family: 'Gilroy', 'Arial', sans-serif !important;
+}
+
+.text-primary {
+  color: #004060;
+}
+
+.btn-primary {
+  color: #fff !important;
+  background-color: #004060 !important;
+  border-color: #004060 !important;
+}
