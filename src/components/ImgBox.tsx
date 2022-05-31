@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 const ImgContainer = styled.div`
   display: flex;
-  max-width: 150px;
-  max-height: 150px;
+  max-width: 250px;
+  max-height: 250px;
   margin-bottom: 20px;
   border: 1px solid transparent;
   border-radius: 18px;

@@ -13,6 +13,7 @@ interface CardProps {
     quantity: number;
     total: string;
   };
+  imgUrl: string;
 }
 
 const Img = styled.img`
@@ -68,7 +69,7 @@ const checkProductUnitsReturn = (
     : inputTarget.classList.remove('warning');
 };
 
-const CardProduct: FC<CardProps> = ({ orderData }) => {
+const CardProduct: FC<CardProps> = ({ orderData, imgUrl }) => {
   return (
     <Paper
       sx={{
@@ -83,10 +84,7 @@ const CardProduct: FC<CardProps> = ({ orderData }) => {
       <Grid container spacing={2}>
         <Grid item>
           <ButtonBase sx={{ width: 128, height: 128 }}>
-            <Img
-              alt="complex"
-              src="https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/446935/sub/goods_446935_sub18.jpg?width=722&impolicy=quality_70&imformat=chrome"
-            />
+            <Img alt="product-image" src={imgUrl} />
           </ButtonBase>
         </Grid>
         <Grid item xs={12} sm container>

@@ -25,8 +25,7 @@ const Summary: FC = () => {
   const locationData = useLocation();
   const navigate = useNavigate();
   const refundData = locationData.state ? locationData.state : useRefund().data;
-  const imgUrl =
-    'https://image.uniqlo.com/UQ/ST3/WesternCommon/imagesgoods/446935/sub/goods_446935_sub18.jpg?width=722&impolicy=quality_70&imformat=chrome';
+  const imgUrl = '../../public/resoruces/summary.jpg';
 
   console.log(refundData);
   const dispatchNewOrder = () => {
@@ -59,11 +58,11 @@ const Summary: FC = () => {
             gutterBottom
             variant="body1"
             sx={{ maxWidth: 300, textAlign: 'center' }}>
-            <Typography className="text-primary" gutterBottom variant="h6">
+            <Typography gutterBottom variant="h6" sx={{ color: 'black' }}>
               {refundData.total} {refundData.currency}
             </Typography>
             have been paid to the account
-            <Typography className="text-primary" gutterBottom variant="h6">
+            <Typography gutterBottom variant="h6" sx={{ color: 'black' }}>
               {refundData.refund_method_iban}
             </Typography>
           </Typography>

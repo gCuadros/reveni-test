@@ -16,6 +16,9 @@ interface OrderData {
   total: string;
 }
 
+const tShirtImgUrl = '../../public/resoruces/shirt.webp';
+const pantsImgUrl = '../../public/resoruces/pants.jpg';
+
 const OrderView: FC = () => {
   const locationData = useLocation();
   const { data, isSuccess, isError } = useRefund();
@@ -40,9 +43,12 @@ const OrderView: FC = () => {
             Please Select the products that you want to return
           </Typography>
         </div>
-        {productsOrder.map(({ id, name, quantity, total }: OrderData) => (
-          <div key={id} id="container">
-            <CardProduct orderData={{ name, quantity, total }} />
+        {productsOrder.map(({ id, name, quantity, total }: OrderData, index: number) => (
+          <div key={id} id="container" data-index={index}>
+            <CardProduct
+              orderData={{ name, quantity, total }}
+              imgUrl={index === 0 ? tShirtImgUrl : pantsImgUrl}
+            />
           </div>
         ))}
         <Button
