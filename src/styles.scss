@@ -1,5 +1,15 @@
 body {
-  background: linear-gradient(90deg, #b9f7e3, #d8f5ec);
+  background: url('../public/resoruces/background.png');
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+main {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 * {

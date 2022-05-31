@@ -1,10 +1,10 @@
-import { FC, useState } from 'react';
+import React, { FC } from 'react';
 
 import ButtonBase from '@mui/material/ButtonBase';
 import Grid from '@mui/material/Grid';
 import Paper from '@mui/material/Paper';
 import Typography from '@mui/material/Typography';
-import { removeSizeonName } from '../../helpers/string.helpers';
+import { removeSizeonName } from '../helpers/string.helpers';
 import styled from 'styled-components';
 
 interface CardProps {
@@ -56,11 +56,14 @@ const QuantityInput = styled.input`
   }
 `;
 
-const checkProductUnitsReturn = (productUnit: number, event: any) => {
-  const maxProductUnit = parseInt(event.target.value);
-  const inputTarget = event.target;
+const checkProductUnitsReturn = (
+  productUnit: number,
+  event: React.ChangeEvent<HTMLInputElement>
+) => {
+  const inputTarget = event.target as HTMLInputElement;
+  const maxProductUnit = parseInt(inputTarget.value);
 
-  productUnit < maxProductUnit
+  productUnit < maxProductUnit && inputTarget
     ? inputTarget.classList.add('warning')
     : inputTarget.classList.remove('warning');
 };

@@ -6,6 +6,7 @@ import Typography from '@mui/material/Typography';
 import styled from 'styled-components';
 import { useLocation } from 'react-router-dom';
 import { useNavigate } from 'react-router-dom';
+import { useProducts } from '../../hooks/useProducts';
 import { useRefund } from '../../hooks/useRefund';
 
 interface OrderData {
@@ -15,25 +16,21 @@ interface OrderData {
   total: string;
 }
 
-const MainOrderView = styled.main`
-  padding: 60px;
-`;
-
 const OrderView: FC = () => {
   const locationData = useLocation();
   const { data, isSuccess, isError } = useRefund();
   const navigate = useNavigate();
-  const orderData = locationData.state ? locationData.state : useRefund().data;
+  const orderData = locationData.state ? locationData.state : useProducts().data;
   const productsOrder = orderData.line_items;
 
   const dispatchRefund = () => {
     if (isSuccess) {
-      navigate('/refund', { state: data });
+      navigate('/summary', { state: data });
     }
   };
 
   return (
-    <MainOrderView>
+    <main>
       <Grid container direction="column" justifyContent="space-between" alignItems="center">
         <div className="title">
           <Typography className="text-primary" gutterBottom variant="h3" component="div">
@@ -56,7 +53,7 @@ const OrderView: FC = () => {
           Return items
         </Button>
       </Grid>
-    </MainOrderView>
+    </main>
   );
 };
 

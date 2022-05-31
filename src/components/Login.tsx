@@ -5,7 +5,6 @@ import { useForm } from 'react-hook-form';
 const LoginForm = styled.form`
   width: 320px;
   padding: 30px;
-  padding-top: 156px;
 `;
 
 const LoginField = styled.div`

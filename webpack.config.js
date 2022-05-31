@@ -15,8 +15,11 @@ const ruleForTypeScript = {
 };
 
 const ruleForMedia = {
-  test: /\.(jpg|jpeg|png|gif|mp3|svg)$/,
-  use: ['file-loader']
+  test: /\.(png|jpe?g|gif|jp2|webp)$/,
+  loader: 'file-loader',
+  options: {
+    name: '[name].[ext]'
+  }
 };
 
 const ruleforFonts = {
@@ -37,7 +40,7 @@ const ruleForCss = {
   use: ['style-loader', 'css-loader']
 };
 
-const rules = [rulesForJavaScript, ruleForTypeScript, ruleForCss, ruleforFonts];
+const rules = [rulesForJavaScript, ruleForTypeScript, ruleForCss, ruleforFonts, ruleForMedia];
 
 module.exports = (env, argv) => {
   const { mode } = argv;
@@ -66,7 +69,8 @@ module.exports = (env, argv) => {
       rules
     },
     devServer: {
-      historyApiFallback: true
+      historyApiFallback: true,
+      port: 3000
     }
   };
 };
